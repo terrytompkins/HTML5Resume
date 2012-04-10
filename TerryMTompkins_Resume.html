@@ -383,46 +383,53 @@ Selected for "Who's Who Among American Colleges and Universities" in 1986, Membe
 <dd>
 
 <section id="skills">
+<p itemprop="description">Self-assessed skill level, scale 1-10.  Chart population below is in progress.<br />Previous recorded data in <a href="TerryMTompkins Resume - LegacyWordFormat.htm">Word-formatted Resume</a></p>
+
 <div id="chartdiv"></div> 
 
 <script class="code" type="text/javascript">
 $(document).ready(function(){
-  var grailsData=[['01-Jan-2008', 1], ['01-Jul-2008', 3], ['01-Jan-2009', 4], ['01-Jul-2009', 5], ['01-Jan-2010', 5], ['01-Jul-2010', 5], ['01-Jan-2011', 6], ['01-Jul-2011', 7], ['01-Jan-2012', 7]];
-  var linuxData=[['01-Jan-1993', 1], ['01-Jul-1993', 2], ['01-Jan-1994', 3], ['01-Jul-1994', 4], ['01-Jan-1995', 5], ['01-Jul-1995', 5], ['01-Jan-1996', 6], ['01-Jul-1996', 6], ['01-Jan-2007', 7]];
+	var grailsData=[['01-Jan-2008', 1], ['01-Jul-2008', 3], ['01-Jan-2009', 4], ['01-Jul-2009', 5], ['01-Jan-2010', 5], ['01-Jul-2010', 5], ['01-Jan-2011', 6], ['01-Jul-2011', 7], ['01-Jan-2012', 7]];
+	var linuxData=[['01-Jan-1993', 3], ['01-Jul-1993', 4], ['01-Jan-1994', 5], ['01-Jan-1995', 5], ['01-Jan-1996', 6], ['01-Jan-1997', 7], ['01-Jan-1998', 8], ['01-Jan-1999', 7], ['01-Jan-2000', 7], ['01-Jan-2001', 7], ['01-Jan-2002', 6], ['01-Jan-2003', 6], ['01-Jan-2004', 6], ['01-Jan-2005', 6], ['01-Jan-2006', 6], ['01-Jan-2007', 6], ['01-Jan-2008', 6], ['01-Jan-2009', 5], ['01-Jan-2010', 5], ['01-Jan-2011', 5]];
+	var perlData=[['01-Jan-1996', 3], ['01-Jan-1997', 3], ['01-Jan-1998', 3], ['01-Jan-1999', 3], ['01-Jan-2000', 3], ['01-Jan-2001', 4], ['01-Jan-2002', 6], ['01-Jan-2003', 9], ['01-Jan-2004', 8], ['01-Jan-2005', 8], ['01-Jan-2006', 7], ['01-Jan-2007', 7], ['01-Jan-2008', 6], ['01-Jan-2009', 5], ['01-Jan-2010', 5], ['01-Jan-2011', 5]];
+	var xticks = []; for (var year=1987; year<=2012; year++) {xticks.push(year.toString()); }
+	var yticks = []; for (var level=0; level<=10; level++) {yticks.push(level.toString()); }
 
-  var plot1 = $.jqplot('chartdiv', [grailsData, linuxData], {
-      title:'Skill Levels Over Career',
-      seriesColors: [ "#ff5800", "#4bb2c5", "#c5b47f", "#EAA228", "#579575", "#839557", "#958c12",
-                      "#953579", "#4b5de4", "#d8b83f", "#ff5800", "#0085cc"],
-      axes:{
-        xaxis:{
-          renderer:$.jqplot.DateAxisRenderer,
-          tickOptions:{
-            formatString: '%b&nbsp;%Y'    // '%b&nbsp;%#d'
-          } 
-        },
-        yaxis:{
-          tickOptions:{
-            formatString:'%d'
-            }
-        }
-      },
-      series:[
-              {label:'Grails'},
-              {label:'Linux'}
-      ],
-      legend: {
-          show: true,
-          placement: 'outsideGrid'
-      },
-      highlighter: {
-        show: true,
-        sizeAdjust: 7.5
-      },
-      cursor: {
-        show: false
-      }
-  });
+	var plot1 = $.jqplot('chartdiv', [grailsData, linuxData, perlData], {
+		title:'Skill Levels Over Career',
+		seriesColors: [ "#ff5800", "#4bb2c5", "#c5b47f", "#EAA228", "#579575", "#839557", "#958c12", "#953579", "#4b5de4", "#d8b83f", "#ff5800", "#0085cc"],
+		axes:{
+			xaxis:{
+				renderer:$.jqplot.DateAxisRenderer,
+				ticks: xticks,
+				tickOptions:{
+					formatString: '%y'    // '%b&nbsp;%Y'   '%b&nbsp;%#d'
+				}
+			},
+			yaxis:{
+				ticks: yticks,
+				tickOptions:{
+					formatString:'%d'
+				}
+			}
+		},
+		series:[
+			{label:'Grails'},
+			{label:'Linux'},
+			{label:'PERL'}
+		],
+		legend: {
+			show: true,
+			placement: 'outsideGrid'
+		},
+		highlighter: {
+			show: true,
+			sizeAdjust: 7.5
+		},
+		cursor: {
+			show: false
+		}
+	});
 });
 </script>
 </section>
