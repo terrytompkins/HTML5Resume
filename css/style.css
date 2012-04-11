@@ -104,7 +104,6 @@ a:active {
 /* Header
 --------------------------------------------------- */
 
-
 #contact-details .header_1 {
 	float: left;
 	width: 350px;
@@ -190,6 +189,11 @@ a:active {
     padding: 0px 0px 8px 40px;
 }
 
+#contact-details p.revision	{
+	margin: 0px 0px 0px 20px;
+	font-size: 10px;
+}
+
 
 
 /* Main Content
@@ -267,7 +271,6 @@ p.time	{
 p.summary	{
 	margin: 10px 0px 0px 0px;
 }
-
 
 
 
