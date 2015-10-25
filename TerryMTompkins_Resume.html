@@ -63,10 +63,10 @@
 
 <ul class="info_2">
 <li class="phone"><span itemprop="telephone">(207) 239-2097</span></li>
-<li class="email"><a href="mailto:Tompkins@TransWebTools.com" itemprop="email">Tompkins@TransWebTools.com</a></li>
+<li class="email"><a href="mailto:me@TerryTompkins.com" itemprop="email">me@TerryTompkins.com</a></li>
 <li class="site_url"><a rel="me" itemprop="url" href="http://TransWebTools.com" title="TransWebTools.com">http://TransWebTools.com</a></li>
-<li class="site_url"><a rel="me" itemprop="url" href="http://www.linkedin.com/pub/terry-tompkins/1/2b6/955" </a></li>
-<li class="site_url"><a rel="me" itemprop="url" href="http://twitter.com/tmtompkins" title="Follow Me on Twitter">@tmtompkins</a></li>
+<li class="linkedin"><a rel="me" itemprop="url" href="https://www.linkedin.com/in/TerryMTompkins">https://www.linkedin.com/in/TerryMTompkins</a></li>
+<li class="twitter"><a rel="me" itemprop="url" href="http://twitter.com/tmtompkins" title="Follow Me on Twitter">@tmtompkins</a></li>
 <li class="github"><a rel="me" itemprop="url" href="https://github.com/transwebt" title="github">https://github.com/TransWebT</a></li>
 </ul>
 
@@ -89,7 +89,7 @@
 
 <section id="profile" class="bulletList">
 <ul>
-	<li>Software Developer, Software Architect and Development Manager with over 25 years of cross-industry experience in the analysis, design, development, integration and maintenance of system and application software.</li>
+	<li>Software Developer, Software Architect and Development Manager with over 30 years of cross-industry experience in the analysis, design, development, integration and maintenance of system and application software.</li>
 	<li>Demonstrated problem solving skills, capable of generating and following through on creative solutions to difficult challenges.</li>
 	<li>Able to motivate a team to overcome individual differences and contribute to the group effort.</li>
 	<li>Capable of effectively communicating difficult concepts to technical and non-technical people.</li>
@@ -114,9 +114,22 @@
 <section id="experience" class="bulletList">
 <!-- Position #0 -->
 <div itemscope itemtype="http://schema.org/Organization">
+<h2 class="top"><span itemprop="jobTitle">Idexx Laboratories</span></h2>
+<p class="bus1"><span itemprop="name">Software Development Manager III</span></p>
+<p class="time">February 2015 &#45; Present</p>
+<p itemprop="description">
+	<ul>
+		<li>Manage a talented team of 16 full time and contract software developers as we build systems to integrate medical instruments for veterinary clinics.</li>
+		<li>Participate in the architecture and design of next generation clinic software</li>
+	</ul>
+</p>
+</div>
+    
+<!-- Position #1 -->
+<div itemscope itemtype="http://schema.org/Organization">
 <h2 class="top"><span itemprop="jobTitle">Bottomline Technologies</span></h2>
 <p class="bus1"><span itemprop="name">Principal Software Architect</span></p>
-<p class="time">May 2012 &#45; Present</p>
+<p class="time">May 2012 &#45; February 2015</p>
 <p itemprop="description">
 	<ul>
 		<li>Member of the cross-functional Enterprise Architecture Group – member or lead of several teams covering initiatives for DevOps, Analytics, and Development Tools</li>
@@ -136,7 +149,7 @@
 </p>
 </div>
 	
-<!-- Position #1 -->
+<!-- Position #2 -->
 <div itemscope itemtype="http://schema.org/Organization">
 <h2 class="top"><span itemprop="jobTitle">TD Bank</span></h2>
 <p class="bus1"><span itemprop="name">Vice President, Application Development Manager</span></p>
@@ -425,11 +438,12 @@ $(document).ready(function(){
     var javascriptData=[['01-Jan-1997', 1], ['01-Jan-1998', 2], ['01-Jul-1998', 3], ['01-Jan-1999', 3], ['01-Jan-2000', 3], ['01-Jan-2001', 3], ['01-Jan-2002', 4], ['01-Jan-2003', 4], ['01-Jan-2004', 4], ['01-Jan-2005', 4], ['01-Jan-2006', 5], ['01-Jan-2007', 5], ['01-Jan-2008', 6], ['01-Jan-2009', 6], ['01-Jan-2010', 6], ['01-Jan-2011', 6], ['01-Jan-2012', 6], ['01-Jan-2013', 7], ['01-Jan-2014', 7]];
     var sqlData=[['01-Jul-1998', 1], ['01-Jan-1999', 2], ['01-Jan-2000', 3], ['01-Jan-2001', 3], ['01-Jan-2002', 4], ['01-Jan-2003', 4], ['01-Jan-2004', 5], ['01-Jan-2005', 5], ['01-Jan-2006', 6], ['01-Jan-2007', 6], ['01-Jan-2008', 6], ['01-Jan-2009', 6], ['01-Jan-2010', 7], ['01-Jan-2011', 7], ['01-Jan-2012', 7], ['01-Jan-2013', 7], ['01-Jan-2014', 6]];
     var clangData=[['01-Jan-1989', 1], ['01-Jan-1990', 3], ['01-Jan-1991', 5], ['01-Jan-1992', 6], ['01-Jan-1993', 7], ['01-Jan-1994', 7], ['01-Jan-1995', 8], ['01-Jan-1996', 8], ['01-Jan-1997', 8], ['01-Jan-1998', 8], ['01-Jan-1999', 8], ['01-Jan-2000', 8], ['01-Jan-2001', 7], ['01-Jan-2002', 6], ['01-Jan-2003', 5]];
+    var meteorData=[['01-Jan-2015', 3], ['01-Jan-2016', 6]];
 
-    var xticks = []; for (var year=1987; year<=2015; year++) {xticks.push(year.toString()); }
+    var xticks = []; for (var year=1988; year<=2016; year++) {xticks.push(year.toString()); }
 	var yticks = []; for (var level=0; level<=10; level++) {yticks.push(level.toString()); }
 
-	var plot1 = $.jqplot('chartdiv', [grailsData, linuxData, perlData, springmvcData, mongodbData, javascriptData, sqlData, clangData], {
+	var plot1 = $.jqplot('chartdiv', [grailsData, linuxData, perlData, springmvcData, mongodbData, javascriptData, sqlData, clangData, meteorData], {
 		title:'Skill Levels Over Career',
 		seriesColors: [ "#ff5800", "#4bb2c5", "#c5b47f", "#EAA228", "#579575", "#839557", "#958c12", "#953579", "#4b5de4", "#d8b83f", "#ff5800", "#0085cc"],
 		axes:{
@@ -455,7 +469,8 @@ $(document).ready(function(){
             {label:'MongoDb'},
             {label:'Javascript'},
             {label:'SQL'},
-            {label:'C Language'}
+            {label:'C Language'},
+            {label:'Meteor Platform'}
 		],
 		legend: {
 			show: true,
