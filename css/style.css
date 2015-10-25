@@ -128,26 +128,26 @@ a:active {
 	font-weight: normal;
 }
 
-#contact-details  h1	{
+#contact-details  h1 {
 	margin: 0px 0px 0px 20px;
 	font-size: 48px;
 	font-weight: bold;
 }
 
-#contact-details  h3	{
+#contact-details  h3 {
 	margin: 0px 0px 26px 20px;
 	font-size: 26px;
 	font-weight: bold;
 	font-style: italic;
 }
 
-#contact-details ul.info_1	{
+#contact-details ul.info_1 {
 	list-style: none;
 	margin: 0px 0px 0px -12px;
 	font-size: 18px;
 }
 
-#contact-details ul.info_2	{
+#contact-details ul.info_2 {
 	list-style: none;
 	margin: 0px 0px 15px -12px;
 	font-size: 18px;
@@ -159,19 +159,19 @@ a:active {
     padding: 0px 0px 8px 40px;
 }
 
-#contact-details li.phone	{
+#contact-details li.phone {
     background: url("../images/phone.png") no-repeat;
 	background-position: 0px 0px;
     padding: 0px 0px 8px 40px;
 }
 
-#contact-details li.email	{
+#contact-details li.email {
     background: url("../images/mail.png") no-repeat;
 	background-position: 0px 0px;
     padding: 0px 0px 8px 40px;
 }
 
-#contact-details li.site_url	{
+#contact-details li.site_url {
     background: url("../images/computer.png") no-repeat;
 	background-position: 0px 2px;
     padding: 0px 0px 8px 40px;
@@ -183,8 +183,14 @@ a:active {
     padding: 0px 0px 8px 40px;
 }
 
-#contact-details li.github	{
+#contact-details li.github {
     background: url("../images/github_32.png") no-repeat;
+	background-position: 0px 0px;
+    padding: 0px 0px 8px 40px;
+}
+
+#contact-details li.linkedin {
+    background: url("../images/linkedin.png") no-repeat;
 	background-position: 0px 0px;
     padding: 0px 0px 8px 40px;
 }
